@@ -13,13 +13,13 @@ type Property = {
       id: '1',
       title: 'Casa en CDMX con terraza',
       price: '$2,500,000',
-      image: '/casa1.jpg',
+      image: '/cdmx.jpg',
     },
     {
       id: '2',
       title: 'Departamento moderno en Polanco',
       price: '$4,200,000',
-      image: '/depto1.jpg',
+      image: '/polanco.jpg',
     },
   ]
   
