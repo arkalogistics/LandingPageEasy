@@ -62,21 +62,24 @@ export default function Home({ properties }: Props) {
 
       {/* Hero */}
       <Box
-        bg="blue.50"
-        py={{ base: 10, md: 20 }}
-        textAlign="center"
-        px={4}
-        borderBottom="1px solid #e0e0e0"
-      >
-        <Container maxW="3xl">
-          <Heading size="2xl" mb={4}>
-            Encuentra tu próximo hogar ideal
-          </Heading>
-          <Text fontSize="lg" color="gray.600">
-            Navega entre propiedades destacadas y crea campañas increíbles desde una sola plataforma.
-          </Text>
-        </Container>
-      </Box>
+  bgImage="url('/bg.jpg')" // asegúrate que la imagen exista en /public/images/
+  bgSize="cover"
+  bgPosition="center"
+  bgRepeat="no-repeat"
+  py={{ base: 10, md: 20 }}
+  textAlign="center"
+  px={4}
+  borderBottom="1px solid #e0e0e0"
+>
+  <Container maxW="3xl" bg="rgba(255,255,255,0.85)" p={6} borderRadius="md">
+    <Heading size="2xl" mb={4}>
+      Encuentra tu próximo hogar ideal
+    </Heading>
+    <Text fontSize="lg" color="gray.700">
+      Navega entre propiedades destacadas y crea campañas increíbles desde una sola plataforma.
+    </Text>
+  </Container>
+</Box>
 
       {/* Propiedades */}
       <Box px={8} py={16}>
