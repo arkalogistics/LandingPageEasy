@@ -1,7 +1,7 @@
 // lib/easybroker.ts
 
 export type Property = {
-  id: string        // cambia de id?: string → id: string para evitar errores
+  id?: string        // cambia de id?: string → id: string para evitar errores
   title: string
   price: string
   image: string
