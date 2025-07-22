@@ -5,18 +5,25 @@ import {
 import { getProperties } from '../lib/easybroker'
 import { useAdminAccess } from '../lib/useAdminAccess'
 
-export default function ContentBotPage() {
-  const { access, verify } = useAdminAccess()
-  const [pass, setPass] = useState('')
-  const [properties, setProperties] = useState([])
-  const [selectedId, setSelectedId] = useState('')
-  const [content, setContent] = useState('')
-
-  useEffect(() => {
-    if (access) {
-      getProperties().then(setProperties)
-    }
-  }, [access])
+type Property = {
+    id: string
+    title: string
+    price: string
+    image: string
+  }
+  
+  export default function ContentBotPage() {
+    const { access, verify } = useAdminAccess()
+    const [pass, setPass] = useState('')
+    const [properties, setProperties] = useState<Property[]>([]) // ✅ FIX HERE
+    const [selectedId, setSelectedId] = useState('')
+    const [content, setContent] = useState('')
+  
+    useEffect(() => {
+      if (access) {
+        getProperties().then(setProperties)
+      }
+    }, [access])
 
   if (!access) {
     return (
